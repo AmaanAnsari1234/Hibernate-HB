@@ -1,0 +1,28 @@
+entity classes Book and Author under Entity package by db name is Books-author, 
+in books bid, name, price, pages, date
+in author id, name,  phone, email
+book . java
+@ManyToOne
+    @JoinColumn(name = "author_id") 
+Author . java
+    @OneToMany(
+        mappedBy = "author",
+        cascade = CascadeType.ALL,
+        fetch = FetchType.LAZY
+Can one author write many books?
+Yes.
+
+Can one book have many authors?
+Not in your requirement.
+    
+
+under Crud pacakage Save, Update, Fetch, Delete
+
+Goal
+relation Bi direction, and what kind of assosiaction s possible
+then 
+optimize the duplicate relation
+use all possible annotation
+
+
+ 
